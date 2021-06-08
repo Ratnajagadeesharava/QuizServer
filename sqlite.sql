@@ -1,0 +1,1 @@
+INSERT INTO `Questions` (Question,Option1,Option2,Option3,Option4,Answer,Explanation) VALUES("who is prime minister of India?","Vajpayee","Narendra Modi","Manmohan Singh","Rahul Gandhi",2,"Self explanatory");
