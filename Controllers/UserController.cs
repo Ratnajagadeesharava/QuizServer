@@ -45,7 +45,7 @@ namespace QuizCreatorServer.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<TokenDto>> Login(LoginDto loginDto){
           
-            var user =  _dbContext.Users.SingleOrDefault(x=>x.Email == loginDto.email);
+            var user =   _dbContext.Users.SingleOrDefault(x=>x.Email == loginDto.email);
             if(user == null)
             return Unauthorized("Invalid Email");
             using var hmac =new  HMACSHA512(user.PasswordSalt);
