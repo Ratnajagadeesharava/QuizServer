@@ -36,7 +36,8 @@ namespace QuizCreatorServer.Controllers
                 UserName = userDto.username,
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(userDto.password)),
                 PasswordSalt = hmac.Key,
-                Email = userDto.email
+                Email = userDto.email,
+                Optional = userDto.optional
             };
             _dbContext.Users.Add(user);
             await _dbContext.SaveChangesAsync();
